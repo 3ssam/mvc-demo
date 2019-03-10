@@ -35,6 +35,8 @@ public class HelloWorldController {
 		model.addAttribute("massage", msg);
 		return "helloworld";
 	}
+	
+
 
 
 }
