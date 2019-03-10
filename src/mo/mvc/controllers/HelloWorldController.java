@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloWorldController {
@@ -22,6 +23,13 @@ public class HelloWorldController {
 	@RequestMapping("/processFormVersion2")
 	public String processFormVersion2(HttpServletRequest request,Model model) {
 		String name =  request.getParameter("studentName");
+		String msg = "Welcome " + name + " in Spring MVC.";
+		model.addAttribute("massage", msg);
+		return "helloworld";
+	}
+
+	@RequestMapping("/processFormVersion3")
+	public String processFormVersion3(@RequestParam("studentName") String name,Model model) {
 		String msg = "Welcome " + name + " in Spring MVC.";
 		model.addAttribute("massage", msg);
 		return "helloworld";
