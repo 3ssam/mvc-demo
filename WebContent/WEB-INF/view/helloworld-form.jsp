@@ -5,7 +5,7 @@
 <title>Welcome MVC</title>
 </head>
 <body>
-<form action="processForm" method="get">
+<form action="processFormVersion2" method="get">
 <input placeholder="Enter Your Name" type="text" name="studentName"/>
 <input type="submit"/>
 </form>

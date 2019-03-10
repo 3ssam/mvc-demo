@@ -7,5 +7,7 @@
 <h2>Welcome MVC</h2>
 <br>
 <h2>Student name: ${param.studentName}</h2>
+<br>
+<h2>${massage}</h2>
 </body>
 </html>
