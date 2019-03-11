@@ -1,5 +1,8 @@
 package mo.mvc.models;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -13,6 +16,8 @@ public class Customer {
 	private String lastName;
 	
 	private String country;
+	
+	private LinkedHashMap<String,String> countryOptions;
 
 	public String getCountry() {
 		return country;
@@ -20,6 +25,10 @@ public class Customer {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+	public LinkedHashMap<String, String> getCountryOptions() {
+		return countryOptions;
 	}
 
 	public String getFirstName() {
@@ -40,6 +49,12 @@ public class Customer {
 
 	public Customer() {
 		super();
+		countryOptions = new LinkedHashMap<>();
+		countryOptions.put("Bra", "Brazil");
+		countryOptions.put("Fra", "France");
+		countryOptions.put("Ger", "Germany");
+		countryOptions.put("Ind", "India");
+		countryOptions.put("USA", "Unit stats");
 	}
 
 	public Customer(@NotNull(message = "is requied") String firstName,

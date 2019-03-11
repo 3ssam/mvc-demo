@@ -14,10 +14,7 @@ Last Name<form:input path="lastName"/>
 <form:errors path="lastName" cssClass="error" />
 <br><br>
 <form:select path="country">
-<form:option value="Brazil" label="Brazil" />
-<form:option value="France" label="France" />
-<form:option value="Germany" label="Germany" />
-<form:option value="India" label="India" />
+<form:options items="${customer.countryOptions}" />
 </form:select>
 <input type="submit" value="Submit"/>
 </form:form>
