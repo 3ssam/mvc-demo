@@ -6,5 +6,7 @@
 </head>
 <body>
 The customer is confirmed: ${customer.firstName} ${customer.lastName}
+<br>
+${customer.country }
 </body>
 </html>

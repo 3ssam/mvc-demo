@@ -11,6 +11,16 @@ public class Customer {
 	@NotNull(message="is requied")
 	@Size(min = 2,message = "length of the name should be 2 charceter at least")
 	private String lastName;
+	
+	private String country;
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
 
 	public String getFirstName() {
 		return firstName;
