@@ -6,8 +6,37 @@ import javax.validation.constraints.Size;
 public class Customer {
 
 	@NotNull(message="is requied")
-	private String fristName;
+	private String firstName;
 
+	@NotNull(message="is requied")
 	@Size(min = 2,message = "length of the name should be 2 charceter at least")
 	private String lastName;
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String fristName) {
+		this.firstName = fristName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Customer() {
+		super();
+	}
+
+	public Customer(@NotNull(message = "is requied") String firstName,
+			@Size(min = 2, message = "length of the name should be 2 charceter at least") String lastName) {
+		super();
+		this.lastName = lastName;
+	}
+	
+	
 }
