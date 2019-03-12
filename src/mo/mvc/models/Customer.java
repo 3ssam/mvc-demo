@@ -19,6 +19,16 @@ public class Customer {
 	
 	private String favoriteLanguage;
 	
+	private String operatingsystem;
+	
+	public String getOperatingsystem() {
+		return operatingsystem;
+	}
+
+	public void setOperatingsystem(String operatingsystem) {
+		this.operatingsystem = operatingsystem;
+	}
+
 	public String getFavoriteLanguage() {
 		return favoriteLanguage;
 	}

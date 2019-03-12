@@ -22,6 +22,11 @@ The Favorite Language :
 <form:radiobutton path="favoriteLanguage" value="Ruby"/>Ruby
 <form:radiobutton path="favoriteLanguage" value="Swift"/>Swift
 <br><br>
+My Operating System :
+Linux <form:checkbox path="operatingsystem" value="Linux" />
+Mac OS <form:checkbox path="operatingsystem" value="Mac OS" />
+Windows <form:checkbox path="operatingsystem" value="Windows" />
+<br><br>
 </form:select>
 <input type="submit" value="Submit"/>
 </form:form>
