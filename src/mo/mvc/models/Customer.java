@@ -17,6 +17,20 @@ public class Customer {
 	
 	private String country;
 	
+	private String favoriteLanguage;
+	
+	public String getFavoriteLanguage() {
+		return favoriteLanguage;
+	}
+
+	public void setFavoriteLanguage(String favoriteLanguage) {
+		this.favoriteLanguage = favoriteLanguage;
+	}
+
+	public void setCountryOptions(LinkedHashMap<String, String> countryOptions) {
+		this.countryOptions = countryOptions;
+	}
+
 	private LinkedHashMap<String,String> countryOptions;
 
 	public String getCountry() {

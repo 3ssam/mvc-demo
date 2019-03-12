@@ -8,5 +8,7 @@
 The customer is confirmed: ${customer.firstName} ${customer.lastName}
 <br>
 ${customer.country }
+<br><br>
+${customer.favoriteLanguage }
 </body>
 </html>

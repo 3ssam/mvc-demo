@@ -15,6 +15,13 @@ Last Name<form:input path="lastName"/>
 <br><br>
 <form:select path="country">
 <form:options items="${customer.countryOptions}" />
+<br><br>
+The Favorite Language :
+<form:radiobutton path="favoriteLanguage" value="Java"/>Java
+<form:radiobutton path="favoriteLanguage" value="C#"/>C#
+<form:radiobutton path="favoriteLanguage" value="Ruby"/>Ruby
+<form:radiobutton path="favoriteLanguage" value="Swift"/>Swift
+<br><br>
 </form:select>
 <input type="submit" value="Submit"/>
 </form:form>
