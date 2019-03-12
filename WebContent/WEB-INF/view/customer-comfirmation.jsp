@@ -30,5 +30,10 @@ ${customer.favoriteLanguage }
 
 ${customer.freePasses }
 
+<br><br>
+
+${customer.postalCode }
+
+
 </body>
 </html>
