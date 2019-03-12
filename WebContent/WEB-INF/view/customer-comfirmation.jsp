@@ -7,18 +7,28 @@
 <title>Customer Details</title>
 </head>
 <body>
+
 The customer is confirmed: ${customer.firstName} ${customer.lastName}
+
 <br>
+
 ${customer.country }
+
 <br><br>
+
 ${customer.favoriteLanguage }
+
 <br><br>
+
 <ul>
 <c:forEach var="temp" items="${customer.operatingsystem }">
 <li> ${temp } </li>
 </c:forEach>
-
 </ul>
+
+<br><br>
+
+${customer.freePasses }
 
 </body>
 </html>
