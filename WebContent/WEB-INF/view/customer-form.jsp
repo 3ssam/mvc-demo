@@ -2,13 +2,17 @@
 <!DOCTYPE html >
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+
 <title>Customer Form Registration</title>
+
+<style>
+ .error {color:red}
+ </style>
+ 
 </head>
 <body>
 <form:form modelAttribute="customer" action="processForm">
 First Name<form:input path="firstName"/>
-<form:errors path="firstName" cssClass="error" />
 <br><br>
 Last Name<form:input path="lastName"/>
 <form:errors path="lastName" cssClass="error" />
