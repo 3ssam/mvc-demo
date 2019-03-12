@@ -2,9 +2,12 @@ package mo.mvc.controllers;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,6 +17,12 @@ import mo.mvc.models.Customer;
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
+	
+	@InitBinder
+	public void initBinder(WebDataBinder dataBinder) {
+		StringTrimmerEditor editor = new StringTrimmerEditor(true);
+		dataBinder.registerCustomEditor(String.class, editor);
+	}
 	
 	@RequestMapping("/showForm")
 	public String showForm(Model model) {
@@ -26,7 +35,7 @@ public class CustomerController {
 	@RequestMapping("/processForm")
 	public String processForm(@Valid @ModelAttribute("customer") Customer customer,
 			BindingResult result) {
-		
+		System.out.println("last name is|"+ customer.getLastName() +"|");
 		if (result.hasErrors())
 			return "customer-form";
 		else
